@@ -50,6 +50,7 @@ The site deploys automatically via the
 
 1. Push the repository to GitHub.
 2. In the repo, go to **Settings → Pages**. Under **Build and deployment**,
-   set **Source** to **GitHub Actions**.
+   set **Source** to **GitHub Actions**. (The workflow also passes
+   `enablement: true`, so on most repos this step happens automatically.)
 3. Every push to `main` (or a manual run from the Actions tab) builds the
    site and deploys it via `.github/workflows/deploy.yml`.
