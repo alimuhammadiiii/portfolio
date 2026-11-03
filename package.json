@@ -1,5 +1,6 @@
 {
   "name": "ali-muhammadi-portfolio",
+  "homepage": "https://alimuhammadiiii.github.io/ali-muhammadi-portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,12 +9,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.3.0",
     "@fontsource-variable/geist-mono": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^1.66.0",
     "motion": "^14.9.0",
     "react": "^19.3.1",
@@ -35,3 +39,4 @@
     "vite": "^8.3.5"
   }
 }
+
