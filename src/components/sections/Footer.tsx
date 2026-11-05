@@ -21,7 +21,7 @@ export function Footer() {
             aria-label="Ali Muhammadi — back to top"
             className="flex items-center gap-2.5"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/25 to-cyan-400/15 font-mono text-sm font-semibold text-white ring-1 ring-white/15">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/25 to-violet-500/5 font-mono text-sm font-semibold text-mist-100 ring-1 ring-white/15">
               AM
             </span>
             <span className="text-sm font-medium text-mist-100">Ali Muhammadi</span>
@@ -37,7 +37,7 @@ export function Footer() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm text-mist-400 transition-colors hover:text-white"
+                  className="text-sm text-mist-400 transition-colors hover:text-mist-100"
                 >
                   {link.label}
                 </a>
@@ -55,7 +55,7 @@ export function Footer() {
                 {...(social.label === "Email"
                   ? {}
                   : { target: "_blank", rel: "noopener noreferrer" })}
-                className="glass flex h-10 w-10 items-center justify-center rounded-xl text-mist-400 transition-colors hover:border-white/25 hover:text-white"
+                className="glass flex h-10 w-10 items-center justify-center rounded-xl text-mist-400 transition-colors hover:border-white/25 hover:text-mist-100"
               >
                 {social.label === "LinkedIn" && <LinkedInIcon className="h-4.5 w-4.5" />}
                 {social.label === "GitHub" && <GitHubIcon className="h-4.5 w-4.5" />}

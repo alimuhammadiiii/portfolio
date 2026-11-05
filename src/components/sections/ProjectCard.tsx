@@ -1,32 +1,58 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import type { Project } from "../../data/projects";
 import { Reveal } from "../ui/Reveal";
 import { Tag } from "../ui/Tag";
-import { ProjectPreview } from "./ProjectPreview";
+import { ProjectScreenshot } from "./ProjectScreenshot";
 
 export interface ProjectCardProps {
   project: Project;
   delay?: number;
 }
 
+/** Typographic panel shown for projects without a screenshot. */
+function ProjectWordmark({ name, category }: { name: string; category: string }) {
+  return (
+    <div className="relative flex h-full flex-col items-center justify-center gap-2.5 overflow-hidden px-6 text-center">
+      <span
+        aria-hidden="true"
+        className="absolute text-7xl font-bold tracking-tight text-transparent uppercase select-none [-webkit-text-stroke:1px_rgba(244,244,244,0.1)]"
+      >
+        {name}
+      </span>
+      <p className="relative text-xl font-semibold text-mist-100">{name}</p>
+      <p className="relative font-mono text-[11px] tracking-[0.18em] text-mist-500 uppercase">
+        {category}
+      </p>
+    </div>
+  );
+}
+
 export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
   return (
     <Reveal delay={delay} className="h-full">
-      <article className="glass glass-hover flex h-full flex-col overflow-hidden rounded-2xl">
-        <div
-          className="relative h-44 border-b border-white/8"
-          style={{
-            backgroundImage: `radial-gradient(circle at 70% 15%, ${project.accent}1f, transparent 60%)`,
-          }}
-        >
-          <ProjectPreview kind={project.preview} accent={project.accent} />
+      <article className="glass glass-hover group flex h-full flex-col overflow-hidden rounded-2xl">
+        <div className="relative h-44 overflow-hidden border-b border-white/12 bg-night-800/50">
+          {project.image ? (
+            <>
+              <ProjectScreenshot
+                image={project.image}
+                className="h-full w-full transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-night-900/50 to-transparent"
+              />
+            </>
+          ) : (
+            <ProjectWordmark name={project.name} category={project.category} />
+          )}
         </div>
 
         <div className="flex flex-1 flex-col p-6">
           <h3 className="font-mono text-xs tracking-[0.2em] text-mist-500 uppercase">
             {project.category}
           </h3>
-          <p className="mt-2 text-lg font-semibold text-white">{project.name}</p>
+          <p className="mt-2 text-lg font-semibold text-mist-100">{project.name}</p>
           <p className="mt-0.5 text-xs font-medium text-violet-300">{project.role}</p>
 
           <p className="mt-3 text-sm leading-relaxed text-mist-400">{project.description}</p>
@@ -37,7 +63,10 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
                 key={responsibility}
                 className="flex gap-2 text-[13px] leading-relaxed text-mist-400"
               >
-                <Check size={14} aria-hidden="true" className="mt-1 shrink-0 text-violet-400" />
+                <span
+                  aria-hidden="true"
+                  className="mt-[0.5rem] h-1 w-1 shrink-0 rounded-full bg-violet-400"
+                />
                 {responsibility}
               </li>
             ))}

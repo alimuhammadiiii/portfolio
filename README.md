@@ -34,7 +34,7 @@ All personal information, projects, work experience, and skills live in
 ## Notes
 
 - The site deploys to GitHub Pages at
-  `https://alimuhammadiiii.github.io/ali-muhammadi-portfolio/` — canonical,
+  `https://alimuhammadiiii.github.io/portfolio/` — canonical,
   Open Graph, and sitemap URLs already point there. If the site later moves
   to a custom domain, update `src/data/site.ts`, `index.html`,
   `public/robots.txt`, `public/sitemap.xml`, and `base` in `vite.config.ts`.

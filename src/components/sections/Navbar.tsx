@@ -83,7 +83,7 @@ export function Navbar() {
           aria-label="Ali Muhammadi — back to top"
           className="flex items-center gap-2.5 rounded-lg"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/25 to-cyan-400/15 font-mono text-sm font-semibold text-white ring-1 ring-white/15">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/25 to-violet-500/5 font-mono text-sm font-semibold text-mist-100 ring-1 ring-white/15">
             AM
           </span>
           <span className="hidden text-sm font-medium text-mist-100 sm:block">Ali Muhammadi</span>
@@ -99,7 +99,7 @@ export function Navbar() {
                   aria-current={isActive ? "true" : undefined}
                   className={cn(
                     "relative rounded-full px-4 py-2 text-sm transition-colors",
-                    isActive ? "text-white" : "text-mist-400 hover:text-white",
+                    isActive ? "text-mist-100" : "text-mist-400 hover:text-mist-100",
                   )}
                 >
                   {link.label}
@@ -152,8 +152,8 @@ export function Navbar() {
                       className={cn(
                         "block rounded-xl px-4 py-3 text-base transition-colors",
                         isActive
-                          ? "bg-white/5 text-white"
-                          : "text-mist-300 hover:bg-white/5 hover:text-white",
+                          ? "bg-white/5 text-mist-100"
+                          : "text-mist-300 hover:bg-white/5 hover:text-mist-100",
                       )}
                     >
                       {link.label}

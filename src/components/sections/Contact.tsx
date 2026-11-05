@@ -53,7 +53,7 @@ export function Contact() {
         center
         index="06"
         eyebrow="Contact"
-        title="Let's build something meaningful together."
+        title="Let's connect."
         description="I'm interested in connecting with teams and professionals who value thoughtful design, clean code, and great user experiences."
       />
 
@@ -68,7 +68,7 @@ export function Contact() {
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/12 text-violet-300 ring-1 ring-white/10">
                 <card.icon className="h-5 w-5" />
               </span>
-              <span className="text-sm font-semibold text-white">{card.label}</span>
+              <span className="text-sm font-semibold text-mist-100">{card.label}</span>
               <span className="text-sm break-all text-mist-400">{card.value}</span>
             </a>
           </Reveal>

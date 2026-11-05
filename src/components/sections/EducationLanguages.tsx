@@ -15,7 +15,7 @@ export function EducationLanguages() {
             <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-500/12 text-violet-300 ring-1 ring-white/10">
               <GraduationCap size={20} aria-hidden="true" />
             </span>
-            <h3 className="mt-5 text-lg font-semibold text-white">{education.school}</h3>
+            <h3 className="mt-5 text-lg font-semibold text-mist-100">{education.school}</h3>
             <p className="mt-1.5 text-sm leading-relaxed text-mist-400">{education.degree}</p>
           </GlassCard>
         </Reveal>
@@ -25,7 +25,7 @@ export function EducationLanguages() {
             <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-500/12 text-violet-300 ring-1 ring-white/10">
               <Languages size={20} aria-hidden="true" />
             </span>
-            <h3 className="mt-5 text-lg font-semibold text-white">Languages</h3>
+            <h3 className="mt-5 text-lg font-semibold text-mist-100">Languages</h3>
             <ul className="mt-4 space-y-3">
               {languages.map((language) => (
                 <li

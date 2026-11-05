@@ -1,4 +1,10 @@
-export type ProjectPreviewKind = "booking" | "listings" | "admin" | "files";
+export interface ProjectImage {
+  /** Path relative to the deploy base (public/ asset). */
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+}
 
 export interface Project {
   id: string;
@@ -12,9 +18,8 @@ export interface Project {
   url: string;
   urlLabel: string;
   featured?: boolean;
-  preview: ProjectPreviewKind;
-  /** Accent color used for the abstract preview tint. */
-  accent: string;
+  /** Real product screenshot. Projects without one render a typographic panel. */
+  image?: ProjectImage;
 }
 
 export const projects: Project[] = [
@@ -29,31 +34,18 @@ export const projects: Project[] = [
       "Built responsive customer-facing booking flows and business management dashboards.",
       "Developed appointment booking and appointment management features.",
       "Implemented business settings and reporting interfaces.",
-      "Applied responsive design, UI/UX principles, accessibility, and reusable design patterns.",
-      "Contributed to product planning, user flows, and feature definition.",
+      "Applied UI/UX principles, accessibility, and reusable design patterns.",
+      "Contributed to product planning and user flow improvements.",
     ],
     url: "https://nobateki.ir/",
-    urlLabel: "Visit Live Site",
+    urlLabel: "Visit Website",
     featured: true,
-    preview: "booking",
-    accent: "#8b5cf6",
-  },
-  {
-    id: "melkradar",
-    name: "MelkRadar",
-    category: "Real-Estate Platform",
-    role: "Frontend Developer",
-    description:
-      "Contributed to the development of a real-estate platform focused on helping users explore and compare property listings.",
-    responsibilities: [
-      "Collaborated with designers and backend developers to implement UI designs and frontend functionality.",
-      "Participated in code reviews and frontend implementation decisions.",
-      "Developed and maintained browser extensions.",
-    ],
-    url: "https://melkradar.com/",
-    urlLabel: "Visit Live Site",
-    preview: "listings",
-    accent: "#22d3ee",
+    image: {
+      src: "images/projects/nobateki.png",
+      width: 364,
+      height: 611,
+      alt: "Nobateki online booking interface on a mobile screen",
+    },
   },
   {
     id: "fixsell",
@@ -61,18 +53,22 @@ export const projects: Project[] = [
     category: "Web & Admin Platform",
     role: "Frontend Developer",
     description:
-      "Developed customer-facing and administrative interfaces for Fixsell, focusing on reusable components and complex admin workflows.",
+      "Developed customer-facing and administrative interfaces, focusing on reusable components and complex admin workflows.",
     responsibilities: [
       "Developed customer-facing and administrative interfaces.",
-      "Configured Payload CMS and implemented custom admin panel functionality.",
+      "Configured Payload CMS and developed custom admin panel functionality.",
       "Worked with complex data structures and administrative workflows.",
       "Maintained reusable component architecture.",
     ],
     technologies: ["React", "Next.js", "React Query", "Payload CMS"],
     url: "https://cafebazaar.ir/app/com.example.fixsell?ref=share",
-    urlLabel: "View on Cafe Bazaar",
-    preview: "admin",
-    accent: "#60a5fa",
+    urlLabel: "View Project",
+    image: {
+      src: "images/projects/fixsell.jpg",
+      width: 1080,
+      height: 2021,
+      alt: "Fixsell application screens",
+    },
   },
   {
     id: "functionland",
@@ -87,8 +83,27 @@ export const projects: Project[] = [
       "Contributed to the application architecture.",
     ],
     url: "https://play.google.com/store/apps/details?id=land.fx.files",
-    urlLabel: "View on Google Play",
-    preview: "files",
-    accent: "#34d399",
+    urlLabel: "View Project",
+    image: {
+      src: "images/projects/functionland.webp",
+      width: 648,
+      height: 1440,
+      alt: "FunctionLand file management application interface",
+    },
+  },
+  {
+    id: "melkradar",
+    name: "MelkRadar",
+    category: "Real-Estate Platform",
+    role: "Frontend Developer",
+    description:
+      "Contributed to a real-estate platform focused on helping users explore and compare property listings.",
+    responsibilities: [
+      "Collaborated with designers and backend developers to implement UI designs.",
+      "Participated in code reviews and frontend implementation strategies.",
+      "Developed and maintained browser extensions.",
+    ],
+    url: "https://melkradar.com/",
+    urlLabel: "Visit Website",
   },
 ];

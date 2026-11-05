@@ -34,7 +34,7 @@ export function About() {
 
         <Reveal delay={0.1} className="h-full">
           <GlassCard className="h-full p-7 sm:p-8">
-            <h3 className="text-sm font-semibold tracking-[0.2em] text-white uppercase">
+            <h3 className="text-sm font-semibold tracking-[0.2em] text-mist-100 uppercase">
               What I focus on
             </h3>
             <ul className="mt-6 space-y-4">

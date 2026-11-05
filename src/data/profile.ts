@@ -1,11 +1,9 @@
 export const profile = {
   name: "Ali Muhammadi",
-  initials: "AM",
   role: "Frontend Developer",
   experienceYears: "3+",
-  headline: "Frontend Developer crafting modern, responsive web experiences.",
   intro:
-    "I build fast, accessible, and user-friendly web applications with React, Next.js, and TypeScript. I enjoy turning complex requirements into clean interfaces and meaningful user experiences.",
+    "I build modern, responsive, and user-friendly web applications using React, Next.js, and TypeScript.",
   email: "Alimmhd3@gmail.com",
   emailHref: "mailto:Alimmhd3@gmail.com",
   /** Supplied verbatim — do not change the country code. */

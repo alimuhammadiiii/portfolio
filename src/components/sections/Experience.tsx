@@ -40,7 +40,7 @@ export function Experience() {
                 ) : null}
               </div>
 
-              <h3 className="mt-3 text-lg font-semibold text-white">
+              <h3 className="mt-3 text-lg font-semibold text-mist-100">
                 {item.website ? (
                   <a
                     href={item.website}

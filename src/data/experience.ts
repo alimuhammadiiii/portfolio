@@ -20,7 +20,7 @@ export const experience: ExperienceItem[] = [
       "Developed core product features, including online appointment booking, appointment management, business settings, and reporting.",
       "Applied UI/UX principles, responsive design, accessibility, and reusable design patterns throughout the product.",
       "Contributed to product planning, user flows, and feature definition.",
-      "Used AI-assisted development workflows for implementation, debugging, technical investigation, and development productivity.",
+      "Used AI-assisted development workflows for implementation, debugging, and technical investigation.",
     ],
   },
   {
@@ -44,7 +44,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     company: "CS Internship",
-    position: "Web Development Mentor",
+    position: "Mentor",
     bullets: [
       "Mentored students in web development and programming fundamentals.",
       "Supported students in developing programming and professional skills.",

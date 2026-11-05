@@ -28,7 +28,7 @@ export function SectionHeading({
         <span aria-hidden="true" className="h-px w-8 bg-violet-400/50" />
         <span>{eyebrow}</span>
       </p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-mist-100 sm:text-4xl">
         {title}
       </h2>
       {description ? (

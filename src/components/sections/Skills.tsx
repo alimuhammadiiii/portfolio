@@ -26,7 +26,7 @@ function SkillGroupCard({ group, delay }: { group: SkillGroup; delay: number }) 
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-violet-500/12 text-violet-300 ring-1 ring-white/10">
             <Icon size={18} />
           </span>
-          <h3 className="text-base font-semibold text-white">{group.title}</h3>
+          <h3 className="text-base font-semibold text-mist-100">{group.title}</h3>
         </div>
         <ul className="mt-5 flex flex-wrap gap-2">
           {group.skills.map((skill) => (

@@ -6,29 +6,17 @@
   --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Geist Mono Variable", ui-monospace, SFMono-Regular, monospace;
 
-  /* Deep navy / charcoal surfaces */
-  --color-night-950: #04060c;
-  --color-night-900: #070a12;
-  --color-night-800: #0b101c;
-  --color-night-700: #121a2b;
+  /* Neutral dark surfaces */
+  --color-night-950: #060606;
+  --color-night-900: #0c0c0c;
+  --color-night-800: #101010;
+  --color-night-700: #161616;
 
-  /* Text scale — high contrast white + muted gray */
-  --color-mist-100: #eef1f7;
-  --color-mist-300: #c6cddc;
-  --color-mist-400: #9aa4b8;
-  --color-mist-500: #75809a;
-
-  --animate-float: float 9s ease-in-out infinite;
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-12px);
-    }
-  }
+  /* Text scale — #F4F4F4 primary, #A0A0A0 secondary */
+  --color-mist-100: #f4f4f4;
+  --color-mist-300: #c9c9c9;
+  --color-mist-400: #a0a0a0;
+  --color-mist-500: #7a7a7a;
 }
 
 :root {
@@ -79,15 +67,15 @@ body {
    Opaque fallback first; translucent + backdrop blur only when supported.
    Fallback keeps enough opacity for AA text contrast. */
 .glass {
-  background-color: rgb(15 21 36 / 0.92);
-  border: 1px solid rgb(255 255 255 / 0.08);
+  background-color: rgb(16 16 16 / 0.92);
+  border: 1px solid rgb(255 255 255 / 0.12);
 }
 
 @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .glass {
-    background-color: rgb(15 21 36 / 0.55);
-    -webkit-backdrop-filter: blur(16px) saturate(150%);
-    backdrop-filter: blur(16px) saturate(150%);
+    background-color: rgb(16 16 16 / 0.55);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    backdrop-filter: blur(16px) saturate(140%);
   }
 }
 
@@ -101,7 +89,7 @@ body {
 
 .glass-hover:hover,
 .glass-hover:focus-visible {
-  border-color: rgb(255 255 255 / 0.16);
+  border-color: rgb(255 255 255 / 0.2);
   background-color: rgb(255 255 255 / 0.05);
   transform: translateY(-3px);
   box-shadow: 0 20px 40px -20px rgb(0 0 0 / 0.6);
@@ -109,7 +97,7 @@ body {
 
 /* ---------- Decorative helpers ---------- */
 .text-gradient {
-  background-image: linear-gradient(100deg, #c4b5fd 0%, #8b5cf6 45%, #67e8f9 100%);
+  background-image: linear-gradient(100deg, #d8b4fe 0%, #a78bfa 55%, #8b5cf6 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -122,6 +110,12 @@ body {
   background-size: 72px 72px;
   mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, black 15%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, black 15%, transparent 75%);
+}
+
+/* Fades the bottom edge of the hero portrait cutout into the page. */
+.portrait-fade {
+  -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 99%);
+  mask-image: linear-gradient(to bottom, black 82%, transparent 99%);
 }
 
 /* ---------- Skip link ---------- */
